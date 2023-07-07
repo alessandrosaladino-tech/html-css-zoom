@@ -3,119 +3,95 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+ /*utility*/
 :root {
     --zm-page: #000000;
     --zm-endpg: #222222;
     --zm-shscreen:#4bc800;
     --zm-meeting:#aa2323;
     --zm-grey: #4a4a4a;
+    --zm-transparent: rgba(0, 0, 0, 0.351);
 }
 
 body{
     background-color: var(--zm-page);
+    color: white;
 }
 
+/* end utility*/
+
+/*header*/
 header {
-    background-color: var(--zm-page);
-    height: 5vh;
-    position: relative;
+    height: 40px;
+    text-align: end;
+    padding: 0.2rem;
 }
- .preview, .extend {
-    font-size: 20px;
- }
-.preview {
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 0.3rem 0.25rem;
+    border-radius: 0.25rem;
+    background-color: transparent;
+}
+
+.btn-color {
     background-color: var(--zm-grey);
-    color: white;
-    position: absolute;
-    right: 40px;
-    border-radius: 5px;
-    padding: 0.3rem;
-}
-.preview a, .extend i{
-    text-decoration: none;
-    color: white;
-    text-align: center;
-   
-}
-.extend {
-    background-color: var(--zm-grey);
-    color: white;
-    position: absolute;
-    right: 1px;
-    border-radius: 5px;
-    padding: 0.3rem;
 }
 
 .d-flex {
     display: flex;
 }
+
+/*end header*/
+
+
 /*main */
 
-.row {
-    height: 20vh;
-    margin-left: 10rem;
-    margin-right: 10rem;
-}
-
-.col {
-    width: calc(100% / 7);
-    margin: 0.3rem;
-    margin-top: 1.5rem;
-}
-
-.name {
-    position: absolute;
-    background-color: var(--zm-grey);
-    color: white;
-    bottom: 0;
+main{
+    height: calc(100vh - 120px);
 
 }
 
-.user {
-    position: relative;
+.partecipants {
     height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding: 1rem 0;
+    gap: 0.25rem;
+}
+.user {
+    width: 250px;
+    height: 150px;
+    position: relative;
 }
 
 .user img {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
-    
+    object-fit: cover;
 }
 
-footer {
-    background-color: var(--zm-endpg);
-    height: 50px;
+.user .id {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.351);
+    padding: 0.25rem 0.5rem;
+    overflow: hidden;
 }
 
-.menu {
-    height: 100%;
-}
+/*end main*/
 
-
-
-.col-6 {
-    width: calc(20%/2);
-    height: 100%;
-}
-
-.card p{
-    display: inline-block;
-}
-
-.card i {
-    text-align: center;
-    padding: 0.3rem;
-}
-
+/*footer*/
 .mute{
     margin-left: 2rem;
     font-size: 10px;
 }
 
-.arrow {
-    margin-left: 0.2rem;
-}
+
 
 .card p,i {
     color: white;
@@ -129,3 +105,18 @@ footer {
 .end {
     width: 20%;
 }
+
+footer {
+    background-color: var(--zm-endpg);
+    height: 80px;
+}
+
+.menu {
+    height: 100%;
+}
+
+.arrow {
+    margin-left: 0.2rem;
+}
+
+/*end footer*/
