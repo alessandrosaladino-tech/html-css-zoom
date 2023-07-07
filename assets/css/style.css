@@ -86,37 +86,62 @@ main{
 /*end main*/
 
 /*footer*/
-.mute{
-    margin-left: 2rem;
-    font-size: 10px;
-}
-
-
-
-.card p,i {
-    color: white;
-}
-
-.col-cent {
-    width: calc(70%/8);
-    height: 100%;
-}
-
-.end {
-    width: 20%;
-}
 
 footer {
     background-color: var(--zm-endpg);
     height: 80px;
 }
 
-.menu {
-    height: 100%;
+
+nav {
+    position: sticky;
+    height: 5rem;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
-.arrow {
-    margin-left: 0.2rem;
+.menu {
+    flex-grow: 2;
+    justify-content: center;
+}
+
+.record {
+    justify-content: flex-end;
+}
+
+.control {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.control:hover h1 {
+    text-shadow: whitesmoke 1px 0 10px;
+}
+
+.active {
+    color: var(--zoom-active);
+}
+
+.options {
+    align-items: center;
+}
+
+.stop_rec {
+    background-color: var(--zm-grey);
+}
+
+.stop_rec p {
+    color: var(--zm-meeting);
+    padding: 2rem;
+}
+
+.stop_rec:hover p {
+    text-shadow: red 1px 0 10px;
 }
 
 /*end footer*/
